@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Carlos Eduardo Silva",
     role: "Proprietário de BMW M3",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
     comment:
       "Serviço excepcional! A vitrificação ficou perfeita e o carro está brilhando como nunca. A equipe da MMC é extremamente profissional e cuidadosa com cada detalhe. Recomendo muito!",
@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "Juliana Martins",
     role: "Proprietária de Audi A4",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Juliana",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     rating: 5,
     comment:
       "Fiquei impressionada com a qualidade do polimento! O meu carro estava com a pintura opaca e agora parece novo. O atendimento foi ótimo e o resultado superou minhas expectativas. Vale cada centavo!",
@@ -22,7 +22,7 @@ const testimonials = [
   {
     name: "Roberto Almeida",
     role: "Proprietário de Porsche 911",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Roberto",
+    image: "https://randomuser.me/api/portraits/men/68.jpg",
     rating: 5,
     comment:
       "Melhor detailing que já fiz! A higienização interna ficou impecável e a lavagem foi extremamente detalhada. Vocês conquistaram um cliente fiel. Parabéns pelo trabalho de excelência!",
@@ -30,7 +30,7 @@ const testimonials = [
   {
     name: "Fernanda Costa",
     role: "Proprietária de Mercedes C180",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Fernanda",
+    image: "https://randomuser.me/api/portraits/women/12.jpg",
     rating: 5,
     comment:
       "Profissionalismo e qualidade em primeiro lugar! A equipe cuidou do meu carro com tanto carinho que parecia estar cuidando do próprio veículo. O resultado final foi simplesmente perfeito!",
@@ -38,7 +38,7 @@ const testimonials = [
   {
     name: "André Pereira",
     role: "Proprietário de Volvo XC60",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Andre",
+    image: "https://randomuser.me/api/portraits/men/91.jpg",
     rating: 5,
     comment:
       "Incrível! A limpeza técnica do motor foi feita com extrema precisão. O acabamento ficou show e ainda ganhei dicas valiosas de manutenção. Super recomendo a MMC Garage!",
@@ -84,15 +84,26 @@ const Testimonials = () => {
                       className="w-16 h-16 rounded-full border-2 border-primary/30"
                     />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-lg">{testimonial.name}</h4>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      <h4 className="font-semibold text-lg">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.role}
+                      </p>
                     </div>
-                    <Quote className="text-primary/30 flex-shrink-0" size={24} />
+                    <Quote
+                      className="text-primary/30 flex-shrink-0"
+                      size={24}
+                    />
                   </div>
 
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="text-primary fill-primary" size={16} />
+                      <Star
+                        key={i}
+                        className="text-primary fill-primary"
+                        size={16}
+                      />
                     ))}
                   </div>
 

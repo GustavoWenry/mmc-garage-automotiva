@@ -13,19 +13,34 @@ const Footer = () => {
               className="h-16 w-auto mb-4"
             />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Estética automotiva premium com produtos de alta qualidade e resultados excepcionais.
+              Estética automotiva premium com produtos de alta qualidade e
+              resultados excepcionais.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary">Links Rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-primary">
+              Links Rápidos
+            </h3>
             <ul className="space-y-2">
-              {["Início", "Serviços", "Trabalhos", "Depoimentos", "Sobre", "Contato"].map((item) => (
+              {[
+                "Início",
+                "Serviços",
+                "Trabalhos",
+                "Depoimentos",
+                "Sobre",
+                "Contato",
+              ].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => {
-                      const element = document.getElementById(item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+                      const element = document.getElementById(
+                        item
+                          .toLowerCase()
+                          .normalize("NFD")
+                          .replace(/[\u0300-\u036f]/g, "")
+                      );
                       element?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"
@@ -42,8 +57,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-primary">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <MapPin className="text-primary flex-shrink-0 mt-0.5" size={16} />
-                <span>Rua Iracema, 45<br />Monte Carlo, Cachoeirinha – RS</span>
+                <MapPin
+                  className="text-primary flex-shrink-0 mt-0.5"
+                  size={16}
+                />
+                <span>
+                  Rua Iracema, 45
+                  <br />
+                  Monte Carlo, Cachoeirinha – RS
+                </span>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Phone className="text-primary flex-shrink-0" size={16} />
@@ -55,7 +77,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <Clock className="text-primary flex-shrink-0 mt-0.5" size={16} />
+                <Clock
+                  className="text-primary flex-shrink-0 mt-0.5"
+                  size={16}
+                />
                 <span>Seg - Sáb: 08:30 - 20:30</span>
               </li>
             </ul>
@@ -63,7 +88,9 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary">Redes Sociais</h3>
+            <h3 className="text-lg font-semibold mb-4 text-primary">
+              Redes Sociais
+            </h3>
             <p className="text-sm text-muted-foreground mb-4">
               Acompanhe nossos trabalhos e novidades
             </p>
@@ -94,10 +121,12 @@ const Footer = () => {
         <div className="border-t border-primary/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} MMC Garage Estética Automotiva. Todos os direitos reservados.
+              © {new Date().getFullYear()} MMC Garage Estética Automotiva. Todos
+              os direitos reservados.
             </p>
             <p className="text-sm text-muted-foreground text-center md:text-right">
-              Desenvolvido com <span className="text-primary">♥</span> para excelência automotiva
+              Desenvolvido por <span className="text-primary">@wenrydev</span>{" "}
+              para excelência automotiva
             </p>
           </div>
         </div>
